@@ -223,8 +223,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 41123209}
-  - 33: {fileID: 41123212}
-  - 23: {fileID: 41123210}
   m_Layer: 0
   m_Name: S Scene floor - POP IN
   m_TagString: Untagged
@@ -247,33 +245,6 @@ Transform:
   - {fileID: 1464005017}
   m_Father: {fileID: 371505554}
   m_RootOrder: 4
---- !u!23 &41123210
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 41123208}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &41123212
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 41123208}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &42440233
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +516,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: a8169ad9316cb43228caa38fc0531692, type: 2}
+  - {fileID: 2100000, guid: 8e9448594b918ac40b79d21bb1a45e71, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1602,7 +1573,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 371505554}
-  - 95: {fileID: 371505555}
   - 114: {fileID: 371505556}
   m_Layer: 0
   m_Name: Entire Scene
@@ -1629,21 +1599,6 @@ Transform:
   - {fileID: 293495030}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!95 &371505555
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 371505553}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9ac589641849b4d5ea733138840075e1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &371505556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2487,8 +2442,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 612913185}
-  - 33: {fileID: 612913188}
-  - 23: {fileID: 612913186}
   m_Layer: 0
   m_Name: Cube stand-in
   m_TagString: Untagged
@@ -2513,33 +2466,6 @@ Transform:
   - {fileID: 1679570103}
   m_Father: {fileID: 41123209}
   m_RootOrder: 0
---- !u!23 &612913186
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 612913184}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &612913188
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 612913184}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &625551585
 Prefab:
   m_ObjectHideFlags: 0
@@ -5333,21 +5259,21 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: 3
     m_Strength: 1
-    m_Bias: .0500000007
+    m_Bias: .75999999
     m_Softness: 4
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 1
-  m_Lightmapping: 0
+  m_Lightmapping: 1
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7182,7 +7108,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: a8169ad9316cb43228caa38fc0531692, type: 2}
+  - {fileID: 2100000, guid: 8e9448594b918ac40b79d21bb1a45e71, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
