@@ -46,8 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Old Junk\CubeRotate.cs" />
-     <Compile Include="Assets\Old Junk\PointAtScreen.cs" />
      <Compile Include="Assets\QuitOnEscape.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
