@@ -527,7 +527,7 @@ Animation:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 110625129}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 513911250a098a844aca4b6cf71d00a4, type: 2}
   m_Animations:
@@ -2013,7 +2013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b214f137e3db1904cb260afce1e0b463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackedJoint: 11
+  TrackedJoint: 3
   SceneCamera: {fileID: 383014673}
   smoothFactor: 5
   LookAtObject: {fileID: 1263334226}

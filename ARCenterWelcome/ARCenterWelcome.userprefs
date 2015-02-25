@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\ovrvisionsdk_unity\ovrvisionsdk_unity\unity_example_includeOculusSDK\Assets\Ovrvision\Scripts\Ovrvision.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\OverlayDemo\Scripts\KinectOverlayer.cs">
     <Files>
-      <File FileName="..\..\ovrvisionsdk_unity\ovrvisionsdk_unity\unity_example_includeOculusSDK\Assets\Ovrvision\Scripts\Ovrvision.cs" Line="191" Column="23" />
+      <File FileName="..\..\ovrvisionsdk_unity\ovrvisionsdk_unity\unity_example_includeOculusSDK\Assets\Ovrvision\Scripts\Ovrvision.cs" Line="1" Column="1" />
       <File FileName="..\..\ovrvisionsdk_unity\ovrvisionsdk_unity\unity_example_includeOculusSDK\Assets\Ovrvision\Scripts\OvrvisionProperty.cs" Line="1" Column="1" />
+      <File FileName="Assets\OverlayDemo\Scripts\KinectOverlayer.cs" Line="28" Column="79" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
