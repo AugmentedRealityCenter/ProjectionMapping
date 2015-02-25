@@ -10,17 +10,31 @@ public class KinectOverlayer : MonoBehaviour
 
 	//public GUITexture backgroundImage;
 	public KinectWrapper.NuiSkeletonPositionIndex TrackedJoint = KinectWrapper.NuiSkeletonPositionIndex.HandRight;
-	public GameObject OverlayObject;
+	public GameObject SceneCamera;
 	public float smoothFactor = 5f;
-	
+	public GameObject LookAtObject;
+	public GameObject RealCamera;
+
 	public GUIText debugText;
 
 	private float distanceToCamera = 10f;
 
+	void Start ()
+	{
+		if (SceneCamera) {
+			if (LookAtObject) {
+				SceneCamera.transform.LookAt (LookAtObject.transform.position);
+				if(RealCamera){
+					RealCamera.transform.localRotation = SceneCamera.transform.localRotation;
+				}
+			}
+		}
+	}
+
 	void Update() 
 	{
 		KinectManager manager = KinectManager.Instance;
-		
+
 		if(manager && manager.IsInitialized())
 		{	
 			int iJointIndex = (int)TrackedJoint;
@@ -28,7 +42,7 @@ public class KinectOverlayer : MonoBehaviour
 			if(manager.IsUserDetected())
 			{
 				uint userId = manager.GetPlayer1ID();
-				
+
 				if(manager.IsJointTracked(userId, iJointIndex))
 				{
 					Vector3 posJoint = manager.GetRawSkeletonJointPos(userId, iJointIndex);
@@ -39,7 +53,7 @@ public class KinectOverlayer : MonoBehaviour
 						posJoint = posJoint * 3.28084f + new Vector3(0.0f,-15.0f/12.0f,69.0f/12.0f);
 
 						// (0,0,0) for the kinect seems to actually be 1 meter in the Z direction...
-						if(OverlayObject)
+						if(SceneCamera)
 						{
 							Vector3 vPosOverlay = Quaternion.AngleAxis(25,Vector3.left) * posJoint;
 							vPosOverlay.z = -vPosOverlay.z;
@@ -48,7 +62,17 @@ public class KinectOverlayer : MonoBehaviour
 							{
 								debugText.guiText.text = vPosOverlay.ToString();
 							}
-							OverlayObject.transform.position = Vector3.Lerp(OverlayObject.transform.position, vPosOverlay, smoothFactor * Time.deltaTime);
+							SceneCamera.transform.localPosition = vPosOverlay;// Vector3.Lerp(OverlayObject.transform.position, vPosOverlay, smoothFactor * Time.deltaTime);
+							if(RealCamera){
+								RealCamera.transform.localPosition = vPosOverlay;
+							}
+							if(LookAtObject){
+								SceneCamera.transform.LookAt(LookAtObject.transform.position);
+								if(RealCamera){
+									RealCamera.transform.localRotation = SceneCamera.transform.localRotation;
+								}
+							}
+
 						}
 					}
 				}

@@ -1901,7 +1901,7 @@ MonoBehaviour:
   Player2Gestures: 
   MinTimeBetweenGestures: .699999988
   GestureListeners: []
-  CalibrationText: {fileID: 0}
+  CalibrationText: {fileID: 61219981}
   HandCursor1: {fileID: 0}
   HandCursor2: {fileID: 0}
   ControlMouseCursor: 0
@@ -2013,10 +2013,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b214f137e3db1904cb260afce1e0b463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackedJoint: 3
-  OverlayObject: {fileID: 383014673}
-  smoothFactor: 3
-  debugText: {fileID: 61219981}
+  TrackedJoint: 11
+  SceneCamera: {fileID: 383014673}
+  smoothFactor: 5
+  LookAtObject: {fileID: 1263334226}
+  RealCamera: {fileID: 1454410869}
+  debugText: {fileID: 0}
 --- !u!1 &387490771
 GameObject:
   m_ObjectHideFlags: 0
